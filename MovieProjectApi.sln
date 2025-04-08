@@ -13,9 +13,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{69EAA762-6911-4932-B3D5-AC62CB8B8CF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieProjectApi.Domain", "Core\MovieProjectApi.Domain\MovieProjectApi.Domain.csproj", "{591A57BF-CFEB-4587-B1AD-E0443069618D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Persistence", "Infrastructure\MovieApi.Persistence\MovieApi.Persistence.csproj", "{F996B679-EC9A-4634-B76F-A447DAD46609}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{591A57BF-CFEB-4587-B1AD-E0443069618D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591A57BF-CFEB-4587-B1AD-E0443069618D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591A57BF-CFEB-4587-B1AD-E0443069618D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{591A57BF-CFEB-4587-B1AD-E0443069618D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F996B679-EC9A-4634-B76F-A447DAD46609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F996B679-EC9A-4634-B76F-A447DAD46609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F996B679-EC9A-4634-B76F-A447DAD46609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F996B679-EC9A-4634-B76F-A447DAD46609}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{591A57BF-CFEB-4587-B1AD-E0443069618D} = {F4DD5C18-2BF6-4B9B-AF40-181A3DD30B87}
+		{F996B679-EC9A-4634-B76F-A447DAD46609} = {04CB56DF-E05D-4AB0-9E31-D3B5B5DCCDC9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {45A10925-2D60-4AEA-8954-BE047FAE6DDE}
