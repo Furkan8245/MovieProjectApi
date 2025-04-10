@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Features\CQRSDesignPattern\Handlers\" />
-    <Folder Include="Features\CQRSDesignPattern\Queries\" />
   </ItemGroup>
 
 </Project>
