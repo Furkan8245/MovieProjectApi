@@ -1,5 +1,5 @@
 ﻿using MovieApi.Persistence.Context;
-using MovieProjectApi.Application.Features.CQRSDesignPattern.Commands.MovieCommands;
+using MovieProjectApi.Application.Features.CQRSDesignPattern.Commands.CategoryCommands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +16,10 @@ namespace MovieProjectApi.Application.Features.CQRSDesignPattern.Handlers.MovieH
         {
             _context = context;
         }
-        public async void Handle(RemoveMovieCommand command)
+        public async void Handle(RemoveCategoryCommand command)
         {
-            var value = await _context.Movies.FindAsync(command.MovieId);
-            _context.Movies.Remove(value);
+            var value = await _context.Categories.FindAsync(command.CategoryId);
+            _context.Categories.Remove(value);
             await _context.SaveChangesAsync();
         }
     }
