@@ -1,4 +1,5 @@
 ﻿using MovieApi.Persistence.Context;
+using MovieProjectApi.Application.Features.CQRSDesignPattern.Commands.MovieCommands;
 using MovieProjectApi.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -20,11 +21,10 @@ namespace MovieProjectApi.Application.Features.CQRSDesignPattern.Handlers.MovieH
         {
             _context.Movies.Add(new Movie
             {
-                CoverImageUrl = command.CoverImageUrl,
-                CreatedYear = command.CreatedYear,
+                ImageUrl = command.ImageUrl,
+                ProductionYear = command.ProductionYear,
                 Description = command.Description,
                 Duration = command.Duration,
-                ImageUrl = command.ImageUrl,
                 Point = command.Point,
                 ReleaseDate = command.ReleaseDate,
                 Status = command.Status,

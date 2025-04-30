@@ -22,5 +22,10 @@ namespace MovieProjectApi.Application.Features.CQRSDesignPattern.Handlers.MovieH
             _context.Categories.Remove(value);
             await _context.SaveChangesAsync();
         }
+
+        public async Task Handle(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
