@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MovieProjectApi.Application.Features.CQRSDesignPattern.Commands.MovieCommands;
 using MovieProjectApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
+using MovieProjectApi.Application.Features.CQRSDesignPattern.Queries.MovieQueries;
 
 namespace MovieProjectApi.WebApi.Controllers
 {
@@ -41,5 +42,18 @@ namespace MovieProjectApi.WebApi.Controllers
             await _removeMovieCommandHandler.Handle(new RemoveMovieCommand(id));
             return Ok("Film silme işlemi tamamlandı.");
         }
+        [HttpGet("GetMovie")]
+        public async Task<IActionResult> GetMovie(int id)
+        {
+            var value = await _getMovieByIdQueryHandler.Handle(new GetMovieByIdQuery(id));
+            return Ok(value);
+        }
+        [HttpPut]
+        public async Task<IActionResult> UpdateMovie(UpdateMovieCommand command)
+        {
+            await _updateMovieCommandHandler.Handle(command);
+            return Ok("Film güncelleme işlemi tamamlandı.");
+        }
+
     }
 }
