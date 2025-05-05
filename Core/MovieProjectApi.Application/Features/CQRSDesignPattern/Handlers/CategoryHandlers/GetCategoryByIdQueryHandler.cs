@@ -1,4 +1,5 @@
-﻿using MovieProjectApi.Application.Features.CQRSDesignPattern.Queries.CategoryQueries;
+﻿using MovieApi.Persistence.Context;
+using MovieProjectApi.Application.Features.CQRSDesignPattern.Queries.CategoryQueries;
 using MovieProjectApi.Application.Features.CQRSDesignPattern.Results.CategoryResults;
 using System;
 using System.Collections.Generic;
